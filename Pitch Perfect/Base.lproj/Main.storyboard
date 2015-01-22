@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="isl-j6-Lg1">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Record-->
@@ -93,17 +94,47 @@
             </objects>
             <point key="canvasLocation" x="1078.5" y="978"/>
         </scene>
-        <!--View Controller-->
+        <!--Play Sounds View Controller-->
         <scene sceneID="qyJ-9m-TeA">
             <objects>
-                <viewController id="7Pg-oE-E4o" sceneMemberID="viewController">
+                <viewController id="7Pg-oE-E4o" customClass="PlaySoundsViewController" customModule="Pitch_Perfect" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="10V-NK-Agp"/>
                         <viewControllerLayoutGuide type="bottom" id="BCh-lA-22s"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="HeX-Cd-V8a">
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7PR-OI-SBo">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Snail">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="7PR-OI-SBo" firstAttribute="leading" secondItem="HeX-Cd-V8a" secondAttribute="leadingMargin" constant="36" id="75S-JO-ZwY"/>
+                            <constraint firstItem="7PR-OI-SBo" firstAttribute="top" secondItem="10V-NK-Agp" secondAttribute="bottom" constant="50" id="c74-46-pCD"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="7PR-OI-SBo"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="75S-JO-ZwY"/>
+                                <exclude reference="c74-46-pCD"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="7PR-OI-SBo"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="75S-JO-ZwY"/>
+                                <include reference="c74-46-pCD"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FOR-Vw-Cfd" userLabel="First Responder" sceneMemberID="firstResponder"/>
